@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda", "Topicos\Agenda.csproj", "{94FAF9A3-7B4E-4FC8-874F-A4CA3EDDE1F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galeria", "Galeria\Galeria.csproj", "{AB338C30-F74D-4EE8-901D-09311804452F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuGlobal", "MenuGlobal\MenuGlobal.csproj", "{D9DECAD8-2496-453B-9031-637E320418AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FAF9A3-7B4E-4FC8-874F-A4CA3EDDE1F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FAF9A3-7B4E-4FC8-874F-A4CA3EDDE1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FAF9A3-7B4E-4FC8-874F-A4CA3EDDE1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FAF9A3-7B4E-4FC8-874F-A4CA3EDDE1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB338C30-F74D-4EE8-901D-09311804452F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB338C30-F74D-4EE8-901D-09311804452F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB338C30-F74D-4EE8-901D-09311804452F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB338C30-F74D-4EE8-901D-09311804452F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DECAD8-2496-453B-9031-637E320418AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DECAD8-2496-453B-9031-637E320418AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DECAD8-2496-453B-9031-637E320418AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DECAD8-2496-453B-9031-637E320418AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
