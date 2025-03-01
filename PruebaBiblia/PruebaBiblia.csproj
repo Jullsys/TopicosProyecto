@@ -8,10 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Biblia\Biblia.csproj" />
-    <ProjectReference Include="..\Galeria\Galeria.csproj" />
-    <ProjectReference Include="..\Topicos\Agenda.csproj" />
-  </ItemGroup>
-
 </Project>

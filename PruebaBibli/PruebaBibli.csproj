@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Biblia\Biblia.csproj" />
-    <ProjectReference Include="..\Galeria\Galeria.csproj" />
-    <ProjectReference Include="..\Topicos\Agenda.csproj" />
+    <Reference Include="Biblia">
+      <HintPath>..\Biblia\bin\Debug\Biblia.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
