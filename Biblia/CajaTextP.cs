@@ -29,7 +29,7 @@ namespace Biblia
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             bool letraValida = false;
-            // Iteramos a través de los ítems seleccionados en el CheckedListBox
+            //Rrecorremos los ítems seleccionados en el CheckedListBox
             foreach (var item in checkedListBox1.CheckedItems)
             {
 
@@ -44,9 +44,7 @@ namespace Biblia
                     {
                         e.Handled = true; // Bloquea la tecla si no es una letra
                         textBox1.BackColor = Color.Red;
-                    }
-                   
-                    
+                    }                    
                 }
                 //  Si se selecciona "Numeros", solo permitimos números  
                 else if (item.ToString() == "Numeros")
@@ -72,6 +70,7 @@ namespace Biblia
                 }
                 
             }
+            //regresa al color original
             if (letraValida)
             {
                 textBox1.BackColor = SystemColors.Control;
