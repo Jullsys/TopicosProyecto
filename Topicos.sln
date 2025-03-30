@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblia", "Biblia\Biblia.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbarBiblioteca", "ProbarBiblioteca\ProbarBiblioteca.csproj", "{0701CB1D-89ED-4ADA-A8D8-404A4C6F492D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalSumaPrim", "CalSumaPrim\CalSumaPrim.csproj", "{7928602C-C0EE-432F-9DDE-8387BEED8925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoBaseDatos1", "..\..\..\Downloads\AccesoBaseDatos1\AccesoBaseDatos1\AccesoBaseDatos1.csproj", "{AB537FDF-C091-469A-8A01-8E1968B3CC24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{0701CB1D-89ED-4ADA-A8D8-404A4C6F492D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0701CB1D-89ED-4ADA-A8D8-404A4C6F492D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0701CB1D-89ED-4ADA-A8D8-404A4C6F492D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7928602C-C0EE-432F-9DDE-8387BEED8925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7928602C-C0EE-432F-9DDE-8387BEED8925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7928602C-C0EE-432F-9DDE-8387BEED8925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7928602C-C0EE-432F-9DDE-8387BEED8925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB537FDF-C091-469A-8A01-8E1968B3CC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB537FDF-C091-469A-8A01-8E1968B3CC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB537FDF-C091-469A-8A01-8E1968B3CC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB537FDF-C091-469A-8A01-8E1968B3CC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
