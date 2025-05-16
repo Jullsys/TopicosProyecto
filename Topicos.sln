@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoBaseDatos1", "AccesoB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainPage", "MainPage\MainPage.csproj", "{69BEC4E8-1E2F-4A1C-84AD-BF385CC6C0E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginFlow", "LoginFlow\LoginFlow.csproj", "{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,12 @@ Global
 		{69BEC4E8-1E2F-4A1C-84AD-BF385CC6C0E8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{69BEC4E8-1E2F-4A1C-84AD-BF385CC6C0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69BEC4E8-1E2F-4A1C-84AD-BF385CC6C0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

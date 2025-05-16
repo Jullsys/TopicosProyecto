@@ -1,6 +1,6 @@
 ﻿using Microsoft.Maui.Controls;
 
-namespace MainPage // ⚠️ este debe coincidir con tu XAML: x:Class="MainPage.MainPage"
+namespace MainPage 
 {
     public partial class MainPage : ContentPage
     {
