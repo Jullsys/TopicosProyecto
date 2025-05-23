@@ -5,29 +5,24 @@ using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 using Microsoft.Maui.Platform;
 using LoginFlow.Utils;
+using LoginFlow.Datos;
+
 namespace LoginFlow;
 
 public partial class App : Application
 {
+    public static UsuarioDatabase UsuarioRepo { get; private set; }
+
     public App()
     {
         InitializeComponent();
 
-        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderLine", (handler, view) =>
-        {
-#if __ANDROID__
-            (handler.PlatformView as Android.Views.View).SetBackgroundColor(Microsoft.Maui.Graphics.Colors.Transparent.ToAndroid());
-#endif
-        });
-    }
+        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "usuarios.db");
+        UsuarioRepo = new UsuarioDatabase(dbPath);
 
-    protected override Window CreateWindow(IActivationState? activationState)
-    {
-        // Aplicar tema guardado al iniciar
         bool esOscuro = ConfiguracionApp.ObtenerTema();
         UserAppTheme = esOscuro ? AppTheme.Dark : AppTheme.Light;
 
-        return new Window(new AppShell());
+        MainPage = new AppShell(); // Usa solo esto
     }
 }
-

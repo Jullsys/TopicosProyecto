@@ -36,20 +36,6 @@ public partial class AgendaPage : ContentPage
         }
     }
 
-    private async void OnEliminarContacto(object sender, EventArgs e)
-    {
-        if (((SwipeItem)sender).BindingContext is Contacto contacto)
-        {
-            bool confirm = await DisplayAlert("Confirmar", $"¿Eliminar a {contacto.Nombre}?", "Sí", "No");
-            if (confirm)
-            {
-                
-                await db.EliminarContactoAsync(contacto);
-                contactosView.ItemsSource = await db.ObtenerContactosAsync();
-            }
-        }
-    }
-
     private async void OnConfiguracionClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new ConfiguracionPage());

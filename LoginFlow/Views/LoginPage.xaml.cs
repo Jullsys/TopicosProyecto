@@ -1,48 +1,48 @@
-namespace LoginFlow.Views;
+using LoginFlow.Datos;
+using LoginFlow.Modelos;
 
-public partial class LoginPage : ContentPage
+namespace LoginFlow.Views
 {
-    public LoginPage()
+    public partial class LoginPage : ContentPage
     {
-        InitializeComponent();
-    }
-
-    protected override bool OnBackButtonPressed()
-    {
-        Application.Current.Quit();
-        return true;
-    }
-
-    private async void TapGestureRecognizerReg_Tapped(object sender, TappedEventArgs e)
-    {
-        await Shell.Current.GoToAsync("Register");
-    }
-
-    private async void TapGestureRecognizerPwd_Tapped(object sender, TappedEventArgs e)
-    {
-        await Shell.Current.GoToAsync("Recover");
-    }
-
-    private async void LoginButton_Clicked(object sender, EventArgs e)
-    {
-        if (IsCredentialCorrect(Username.Text, Password.Text))
+        public LoginPage()
         {
-            Preferences.Set("UsuarioActual", Username.Text.Trim());
-            await SecureStorage.SetAsync("hasAuth", "true");
-            await Shell.Current.GoToAsync("///home");
+            InitializeComponent();
         }
-        else
+
+        protected override bool OnBackButtonPressed()
         {
-            Preferences.Remove("UsuarioActual");
-            await DisplayAlert("Login failed", "Username or password if invalid", "Try again");
+            return true;
         }
-    }
 
-    bool IsCredentialCorrect(string username, string password)
-    {
-        string storedUsername = Preferences.Get("usuario_nombre", string.Empty);
-        string storedPassword = Preferences.Get("usuario_password", string.Empty);
+        private async void TapGestureRecognizerReg_Tapped(object sender, TappedEventArgs e)
+        {
+            await Shell.Current.GoToAsync("Register");
+        }
 
-        return username == storedUsername && password == storedPassword;
+        private async void TapGestureRecognizerPwd_Tapped(object sender, TappedEventArgs e)
+        {
+            await Shell.Current.GoToAsync("Recover");
+        }
+
+        private async void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            var usuario = await App.UsuarioRepo.ValidarCredencialesAsync(
+                Username.Text?.Trim(),
+                Password.Text?.Trim()
+            );
+
+            if (usuario != null)
+            {
+                Preferences.Set("UsuarioActual", usuario.NombreUsuario);
+                await SecureStorage.SetAsync("hasAuth", "true");
+                await Shell.Current.GoToAsync("///home");
+            }
+            else
+            {
+                Preferences.Remove("UsuarioActual");
+                await DisplayAlert("Error", "Usuario o contraseña incorrectos.", "Intentar de nuevo");
+            }
+        }
     }
 }

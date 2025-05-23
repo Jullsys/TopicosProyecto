@@ -74,7 +74,7 @@
                             <Label Text="{Binding IsButtonEnabled}"/>
                         </VerticalStackLayout>
                         <VerticalStackLayout Margin="0,20,0,0" Padding="10">
-                            <Label Text="Usuarios registrados"
+                            <Label Text="Usuario registrados"
            FontAttributes="Bold"
            FontSize="20"
            HorizontalOptions="Center" />

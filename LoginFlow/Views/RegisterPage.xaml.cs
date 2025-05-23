@@ -1,4 +1,7 @@
-﻿namespace LoginFlow.Views;
+﻿using LoginFlow.Modelos;
+using LoginFlow.Datos;
+
+namespace LoginFlow.Views;
 
 public partial class RegisterPage : ContentPage
 {
@@ -13,7 +16,7 @@ public partial class RegisterPage : ContentPage
         {
             string nombre = NombreEntry.Text?.Trim();
             string correo = CorreoEntry.Text?.Trim();
-            string password = PasswordEntry.Text;
+            string password = PasswordEntry.Text?.Trim();
 
             if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(password))
             {
@@ -21,20 +24,25 @@ public partial class RegisterPage : ContentPage
                 return;
             }
 
-            Preferences.Set("usuario_nombre", nombre);
-            Preferences.Set("usuario_correo", correo);
-            Preferences.Set("usuario_password", password);
+            var usuario = new Usuario
+            {
+                NombreUsuario = nombre,
+                Correo = correo,
+                Password = password
+            };
+
+            await App.UsuarioRepo.RegistrarUsuarioAsync(usuario);
 
             ResultadoLabel.Text = "Usuario registrado correctamente.";
+            ResultadoLabel.TextColor = Colors.Green;
             ResultadoLabel.IsVisible = true;
 
             await Task.Delay(1500);
-            await Shell.Current.GoToAsync(".."); // Regresa al login
+            await Shell.Current.GoToAsync(".."); // Volver al login
         }
         catch (Exception ex)
         {
             await DisplayAlert("Error", $"Ha ocurrido un error: {ex.Message}", "OK");
         }
     }
-
 }

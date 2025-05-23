@@ -2,13 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginFlow.Views.ContactoPage"
-             Title="ContactoPage">
+             Title="Contacto">
 
     <VerticalStackLayout Padding="20">
         <Entry x:Name="nombreEntry" Placeholder="Nombre" />
         <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone" />
         <Entry x:Name="correoEntry" Placeholder="Correo Electrónico" Keyboard="Email" />
         <Button Text="Guardar" Clicked="OnGuardarClicked" />
+
+        <Button x:Name="eliminarBtn" Text="Eliminar" BackgroundColor="Red" TextColor="White"
+                Clicked="OnEliminarClicked" />
     </VerticalStackLayout>
-    
+
 </ContentPage>

@@ -17,12 +17,10 @@ namespace LoginFlow.Views
                 return;
             }
 
-            // Aquí deberías hacer la lógica de recuperación, como enviar un correo de recuperación
-            // Este es solo un ejemplo simulado
             await DisplayAlert("Recuperación", "Se ha enviado un correo con instrucciones para recuperar tu contraseña.", "OK");
 
-            // Después de mostrar el mensaje, puedes redirigir a la página de inicio de sesión
-            await Shell.Current.GoToAsync("login");
+            await Shell.Current.GoToAsync("..");
+
         }
     }
 }
