@@ -53,8 +53,25 @@
                         </VerticalStackLayout>
 
 
-                       
-                        
+                        <Label Text="Tema:" FontAttributes="Bold"/>
+                        <HorizontalStackLayout>
+                            <Label Text="Claro" VerticalOptions="Center"/>
+                            <Switch x:Name="temaSwitch" Toggled="OnTemaToggled" />
+                            <Label Text="Oscuro" VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <Label Text="Idioma:" FontAttributes="Bold"/>
+                        <Picker x:Name="idiomaPicker" SelectedIndexChanged="OnIdiomaChanged">
+                            <Picker.Items>
+                                <x:String>es</x:String>
+                                <x:String>en</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                        <Label x:Name="lblEstado" Text="Cambios guardados" IsVisible="False" TextColor="Green" FontAttributes="Italic" />
+
+
+
 
                     </VerticalStackLayout>
                 </StackLayout>

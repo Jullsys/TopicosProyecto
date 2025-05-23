@@ -80,9 +80,8 @@
                                 FontFamily="Consolas">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span FontFamily="Consolas" FontAttributes="Bold" Text="No tienes una cuenta?" />
-                                        <Span FontFamily="Consolas" FontAttributes="Bold" Text=" Registrate"
-                  TextColor="{StaticResource Primary}"
+                                        <Span FontFamily="Consolas" FontAttributes="Bold" TextColor="Black" Text="No tienes una cuenta?" />
+                                        <Span FontFamily="Consolas" FontAttributes="Bold" TextColor="Black" Text=" Registrate"
                   TextDecorations="Underline">
                                             <Span.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="TapGestureRecognizerReg_Tapped" />

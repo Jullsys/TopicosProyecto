@@ -1,30 +1,22 @@
-using System.Globalization;
 using LoginFlow.Utils;
+using System.Globalization;
+
 namespace LoginFlow.Views;
 
-public partial class SettingsPage : ContentPage
+public partial class ConfiguracionPage : ContentPage
 {
-	public SettingsPage()
-	{
-		InitializeComponent();
+    public ConfiguracionPage()
+    {
+        InitializeComponent();
+
         temaSwitch.IsToggled = ConfiguracionApp.ObtenerTema();
         idiomaPicker.SelectedItem = ConfiguracionApp.ObtenerIdioma();
     }
 
-	private async void LogoutButton_Clicked(object sender, EventArgs e)
-	{
-		if (await DisplayAlert("Are you sure?", "You will be logged out.", "Yes", "No"))
-		{
-            Preferences.Remove("UsuarioActual");
-            SecureStorage.RemoveAll();
-			await Shell.Current.GoToAsync("///login");
-		}
-	}
-
     private void OnTemaToggled(object sender, ToggledEventArgs e)
     {
         ConfiguracionApp.GuardarTema(e.Value);
-
+        
         Application.Current.UserAppTheme = e.Value ? AppTheme.Dark : AppTheme.Light;
 
         lblEstado.IsVisible = true;
@@ -33,7 +25,7 @@ public partial class SettingsPage : ContentPage
     private void OnIdiomaChanged(object sender, EventArgs e)
     {
         string? idiomaSeleccionado = idiomaPicker.SelectedItem.ToString();
-
+        
         if (idiomaSeleccionado != null)
             ConfiguracionApp.GuardarIdioma(idiomaSeleccionado);
 

@@ -28,6 +28,14 @@
         Route="home" />
 
         </Tab>
+        <Tab Title="Agenda" Icon="appicono.jpeg">
+            <ShellContent 
+                   Icon="appicono.jpeg"
+                   Title="Agenda" 
+                   ContentTemplate="{DataTemplate views:AgendaPage}" 
+                    Route="Agenda"/>
+        </Tab>
+        
         <Tab Title="Settings" Icon="gear_fill.svg">
             <ShellContent
                 Icon="house_door_fill.svg"
