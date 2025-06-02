@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainPage", "MainPage\MainPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginFlow", "LoginFlow\LoginFlow.csproj", "{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaApp", "AgendaApp\AgendaApp\AgendaApp.csproj", "{3B7C9369-ED78-649F-3849-D7D16F17BD47}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,10 +66,6 @@ Global
 		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92BF2FF6-242A-4A1E-124C-DD7D707A8A6C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{3B7C9369-ED78-649F-3849-D7D16F17BD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B7C9369-ED78-649F-3849-D7D16F17BD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B7C9369-ED78-649F-3849-D7D16F17BD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B7C9369-ED78-649F-3849-D7D16F17BD47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
