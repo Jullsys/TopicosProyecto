@@ -41,9 +41,5 @@ public partial class ConfiguracionPage : ContentPage
     private void ActualizarTextos()
     {
         return;
-
-        //this.Title = Traductor.Get("Configuracion");
-        //lblEstado.Text = Traductor.Get("CamposRequeridos"); // ejemplo de recarga
-        // Aquí podrías actualizar otros elementos visibles de la página si se desea
     }
 }

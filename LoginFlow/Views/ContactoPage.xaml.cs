@@ -23,7 +23,6 @@ public partial class ContactoPage : ContentPage
         telefonoEntry.Text = contacto.Telefono;
         correoEntry.Text = contacto.CorreoElectronico;
 
-        // Mostrar botón de eliminar si el contacto ya existe
         if (contacto.Id != 0)
             eliminarBtn.IsVisible = true;
     }
@@ -52,7 +51,7 @@ public partial class ContactoPage : ContentPage
         if (confirm)
         {
             await db.EliminarContactoAsync(contacto);
-            await Navigation.PopAsync(); // Volver a la agenda
+            await Navigation.PopAsync(); 
         }
     }
 }

@@ -23,6 +23,6 @@ public partial class App : Application
         bool esOscuro = ConfiguracionApp.ObtenerTema();
         UserAppTheme = esOscuro ? AppTheme.Dark : AppTheme.Light;
 
-        MainPage = new AppShell(); // Usa solo esto
+        MainPage = new AppShell(); 
     }
 }

@@ -38,7 +38,7 @@ public partial class RegisterPage : ContentPage
             ResultadoLabel.IsVisible = true;
 
             await Task.Delay(1500);
-            await Shell.Current.GoToAsync(".."); // Volver al login
+            await Shell.Current.GoToAsync(".."); 
         }
         catch (Exception ex)
         {
